@@ -1,0 +1,84 @@
+include navbar.pug
+
+mixin project(proj)
+    a(href=proj.link).Project
+        .Project_name
+            p #{proj.name}
+        if proj.img
+            img.Project_img(src=proj.img)
+        .Project_desc
+            p #{proj.desc}
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width initial-scale=1 shrink-to-fit=no")
+
+        title Home - Matthew Colson
+        meta(
+            name="description"
+            content="Matthew Colson's personal portfolio"
+        )
+
+        style.
+            @import './index.sass';
+            @import '../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css';
+            @import '../node_modules/@fortawesome/fontawesome-free/css/solid.min.css';
+
+        script.
+            function setup() {
+                setup_observer()
+                setup_navbar()
+            }
+
+            function setup_observer() {
+                function obv (){
+                    let int_obv = new IntersectionObserver(entries => {
+                        entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('show');
+                        }
+                        })
+                    });
+                    
+                    document.querySelectorAll(".hidden").forEach(e => int_obv.observe(e));
+                }
+                    
+                obv();
+                
+                window.addEventListener("locationchange", obv);
+            }
+        
+        +navbar_script
+
+    body(onload="setup()")
+        main(id="root")
+
+        +navbar        
+
+        .header
+            p Hello...
+            p I'm Matthew
+        .bio#about
+            .bio_container
+                p.hidden University of Arizona 
+                p.hidden Software Engineering Undergrad
+                p.hidden 2021 Eagle Scout
+                p.hidden 
+                    a(href="https://pythoninstitute.org/pcep") PCEP™ Certification
+                p.hidden AEOP Neural Network Apprentice
+                p.hidden 
+                    a(href="https://www.firstinspires.org/robotics/fll") FLL Robotics
+                p.hidden Naval Excellence in Science Research Award
+                p.hidden IT Intern
+        .portfolio#portfolio
+            .portfolio_header
+                p Portfolio
+            
+            .projects
+                each proj in projects
+                    +project(proj)
+        footer
+            a(href="https://github.com/m-colson")
+                p Matthew Colson(github)

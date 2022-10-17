@@ -1,0 +1,52 @@
+mixin navbar_script
+    script.
+        function toggle_nav_container() {
+            let x = document.getElementById("navbar_container");
+
+            if(x == null){
+                console.error("Navbar_container does not exist")
+                return
+            }
+
+            if (x.style.display === "flex") {
+                x.style.removeProperty('display');
+            } else {
+                x.style.display = "flex";
+            }
+        }
+
+        function collapse_nav_bar() {
+            document
+                .getElementById("navbar_container")
+                .style
+                .removeProperty('display');
+        }
+
+        function setup_navbar() {
+            let navbar_sticky = document.getElementById("navbar").offsetTop;
+
+            function navbar_check_scroll() {
+                var navbar = document.getElementById("navbar");
+
+                if (window.pageYOffset >= navbar_sticky) {
+                    navbar.classList.add("sticky")
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            }
+
+            window.onscroll = navbar_check_scroll();
+        }
+
+mixin navbar
+    .navbar#navbar
+            .navbar_mobile_hamburger
+                a(href="javascript:toggle_nav_container()")
+                    i(class="fa fa-bars")
+            #navbar_container
+                a(href="/" onclick="collapse_nav_bar()")
+                    p Home
+                a(href="/#about" onclick="collapse_nav_bar()")
+                    p About
+                a(href="/#portfolio" onclick="collapse_nav_bar()")
+                    p Portfolio

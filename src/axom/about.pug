@@ -1,0 +1,30 @@
+include ../navbar.pug
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width initial-scale=1 shrink-to-fit=no")
+
+        title Axom Language
+        meta(
+            name="description"
+            content="Axom Language Reference"
+        )
+        link(rel='stylesheet' href='about.sass')
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+
+        +navbar_script
+
+    body
+        +navbar
+
+        .reference_header
+            p.
+                The Axom Language
+        .about_content
+            include:markdown-it about.md
+
+        footer
+            a(href="https://github.com/m-colson")
+                p Matthew Colson(github)

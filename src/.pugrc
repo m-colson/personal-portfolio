@@ -1,0 +1,19 @@
+{
+	"locals": {
+		"projects": [
+			{
+				"name": "Personal Website",
+				"category": "Web",
+				"desc":"This website! Written with the pug templating language for ease of updating with minimal boilerplate.",
+				"link":"projects/website.pug",
+				"img":"../assets/personal_website.png"
+			},
+			{
+				"name": "Axom Language",
+				"category": "Rust",
+				"desc":"A toy language to experiment with iterators and functional programming.",
+				"link":"axom/about.pug"
+			}
+		]
+	}
+}

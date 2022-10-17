@@ -1,0 +1,30 @@
+include ../navbar.pug
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width initial-scale=1 shrink-to-fit=no")
+
+        title 
+            |Project - 
+            block Name
+        link(rel='stylesheet' href='mod.sass')
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+
+        +navbar_script
+
+    body
+        +navbar
+
+        .title
+            p
+                block Name
+
+        .desc
+            .desc_inner
+                block Long_Desc
+
+        footer
+            a(href="https://github.com/m-colson")
+                p Matthew Colson(github)

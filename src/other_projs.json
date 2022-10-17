@@ -1,0 +1,32 @@
+[
+{
+    "name": "Endian Language",
+    "category": "Typescript",
+    "desc":"My first toy lanuage to play with concatenative programming.",
+    "link":"#"
+},
+{
+    "name": "Onward",
+    "category": "Rust",
+    "desc":"A simple Rust library for making feed forward neural networks.",
+    "link":"#"
+},
+{
+    "name": "OEL",
+    "category": "Rust",
+    "desc":"(Optimal Edge Library) Implements some minimax like algorithms. Used for TicTacRust and chess engine.",
+    "link":"#"
+},
+{
+    "name": "TicTacPy",
+    "category": "Python",
+    "desc":"Neural Network TicTacToe player written in Python.",
+    "link":"#"
+},
+{
+    "name": "TicTacRust",
+    "category": "Rust",
+    "desc":"Reimplementation of TicTacPy in Rust.",
+    "link":"#"
+}
+]
