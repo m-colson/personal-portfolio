@@ -5,7 +5,7 @@ mixin project(proj)
         .Project_name
             p #{proj.name}
         if proj.img
-            img.Project_img(src=proj.img)
+            img.Project_img(src=proj.img alt=proj.alt)
         .Project_desc
             p #{proj.desc}
 
@@ -23,8 +23,6 @@ html(lang="en")
 
         style.
             @import './index.sass';
-            @import '../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css';
-            @import '../node_modules/@fortawesome/fontawesome-free/css/solid.min.css';
 
         script.
             function setup() {

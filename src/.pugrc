@@ -6,7 +6,8 @@
 				"category": "Web",
 				"desc":"This website! Written with the pug templating language for ease of updating with minimal boilerplate.",
 				"link":"projects/website.pug",
-				"img":"../assets/personal_website.png"
+				"img":"../assets/personal_website.webp",
+				"alt":"Image of landing page"
 			},
 			{
 				"name": "Axom Language",
