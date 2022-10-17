@@ -51,28 +51,52 @@ html(lang="en")
         +navbar_script
 
     body(onload="setup()")
-        main(id="root")
-
-        +navbar        
+        main(id="root")    
 
         .header
             p Hello...
             p I'm Matthew
-        .bio#about
-            .bio_container
-                p.hidden University of Arizona 
-                p.hidden Software Engineering Undergrad
-                p.hidden 2021 Eagle Scout
-                p.hidden 
-                    a(href="https://pythoninstitute.org/pcep") PCEP™ Certification
+
+        +navbar    
+
+        .about#about
+            .about_section_header
+                p About Me
+
+            .about_section_container
+                p.hidden University of Arizona Undergrad
+                p.hidden Software Engineering Major
+                p.hidden Electrical and Computer Engineering Minor
+                p.hidden Statistics and Data Science Minor
                 p.hidden AEOP Neural Network Apprentice
+
+            .about_section_header
+                p Clubs
+            .about_section_container
+                p.hidden
+                    | Software Engineering Wildcats Club
+                p.hidden 
+                    a(href="https://www.scouting.org") Boy Scouts of America
+                p.hidden
+                    | National Society of Collegiate Scholars
+                p.hidden
+                    | National Honors Society
                 p.hidden 
                     a(href="https://www.firstinspires.org/robotics/fll") FLL Robotics
+                p.hidden
+                    a(href="https://www.odysseyofthemind.com") Odyssey of the Mind
+
+            .about_section_header
+                p Awards
+            .about_section_container
+                p.hidden 
+                    a(href="https://pythoninstitute.org/pcep") PCEP™ Certification
+                p.hidden 2021 Eagle Scout
                 p.hidden Naval Excellence in Science Research Award
-                p.hidden IT Intern
+                
         .portfolio#portfolio
             .portfolio_header
-                p Portfolio
+                p My Projects
             
             .projects
                 each proj in projects

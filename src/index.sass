@@ -28,16 +28,25 @@ body
 		font-size: 5rem
 		margin: 0px
 		padding: 0px
-		
-.bio
-	min-height: 100vh
+
+#about
+	padding-top: 4rem
+
+.about
+	//min-height: 100vh
 	display: flex
+	flex-direction: column
 	align-items: center
-	justify-content: center
-	.bio_container
+	.about_section_header
+		color: $secondary
+		font-size: 4rem
+		p
+			margin: 0px
+
+	.about_section_container
 		font-size: 2.25rem
 		color: $white
-		width: max-content
+		width: fit-content
 		p
 			//width: fit-content
 			margin: 1em
@@ -59,7 +68,7 @@ body
 			left: 0
 
 	@media screen and (max-width: 700px)
-		.bio_container
+		.about_section_container
 			font-size: 1.5rem
 
 .portfolio
@@ -78,6 +87,9 @@ body
 	p
 		margin: 0px
 
+	@media screen and (max-width: 700px)
+		p
+			font-size: 3rem
 .portfolio_cats
 	overflow: hidden
 

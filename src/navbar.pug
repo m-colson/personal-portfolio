@@ -27,19 +27,24 @@ mixin navbar_script
         }
 
         function setup_navbar() {
-            let navbar_sticky = document.getElementById("navbar").offsetTop;
+            let navbar = document.getElementById("navbar");
 
+            let navbar_sticky = navbar.offsetTop - navbar.offsetHeight;
+            
             function navbar_check_scroll() {
-                var navbar = document.getElementById("navbar");
-
-                if (window.pageYOffset >= navbar_sticky) {
+                if (window.pageYOffset > navbar_sticky) {
                     navbar.classList.add("sticky")
                 } else {
                     navbar.classList.remove("sticky");
                 }
             }
 
-            window.onscroll = navbar_check_scroll();
+            window.onscroll = navbar_check_scroll;
+        }
+
+        function navigate() {
+            collapse_nav_bar(); 
+            navbar.classList.add("sticky");
         }
 
 mixin navbar
@@ -48,9 +53,9 @@ mixin navbar
                 a(href="javascript:toggle_nav_container()")
                     i(class="fa fa-bars")
             #navbar_container
-                a(href="/" onclick="collapse_nav_bar()")
+                a(href="/" onclick="navigate()")
                     p Home
-                a(href="/#about" onclick="collapse_nav_bar()")
-                    p About
-                a(href="/#portfolio" onclick="collapse_nav_bar()")
-                    p Portfolio
+                a(href="/#about" onclick="navigate()")
+                    p About Me
+                a(href="/#portfolio" onclick="navigate()")
+                    p My Projects
