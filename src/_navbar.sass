@@ -1,67 +1,73 @@
 @import palette
 
-.navbar.sticky
-	position: fixed
-	z-index: 10
-	top: 0
+.navbar_context
+	.navbar.sticky
+		position: fixed
+		z-index: 10
+		top: 0
 
-.navbar
-	display: flex
-	flex-direction: column
-
-	background-color: $darkgray
-
-	width: 100%
-
-	.navbar_mobile_hamburger
-		display: flex
-
-		justify-content: flex-end
-		align-items: center
-
-		a
-			color: white
-			text-decoration: none
-		font-size: 1.5rem
-		margin: 0.75rem
-
-	#navbar_container
-		display: none
-		flex-direction: column
-		width: min(1000px, 100%)
-		justify-content: center
-
-		a
-			transition: all 200ms
-			display: flex
-			justify-content: center
-			align-items: center
-			background-color: $primary
-			margin: 0.5rem
-
-			text-decoration: none
-			p
-				margin: 0.75rem
-				text-align: center
-				color: $white
-				font-size: 1.25rem
-
-		a:hover
-			background-color: $gray
-			p
-				color: $black
-
-	#navbar_container
-		display: none
-
-@media screen and (min-width: 600px)
+.navbar_context
+	height: 4rem
 	.navbar
-		flex-direction: row
-		justify-content: center
+		transition: top 100ms
+
+		display: flex
+		flex-direction: column
+
+		background-color: $darkgray
+
+		width: 100%
 
 		.navbar_mobile_hamburger
-			display: none
-			
-		#navbar_container
 			display: flex
+
+			justify-content: flex-end
+			align-items: center
+
+			a
+				color: white
+				text-decoration: none
+			font-size: 1.5rem
+			margin: 0.75rem
+
+		#navbar_container
+			display: none
+			flex-direction: column
+			width: min(1000px, 100%)
+			justify-content: center
+
+			a
+				transition: all 200ms
+				display: flex
+				justify-content: center
+				align-items: center
+				background-color: $primary
+				margin: 0.5rem
+
+				text-decoration: none
+				p
+					margin: 0.75rem
+					text-align: center
+					color: $white
+					font-size: 1.25rem
+
+			a:hover
+				background-color: $gray
+				p
+					color: $black
+
+		#navbar_container
+			display: none
+
+@media screen and (min-width: 600px)
+	.navbar_context
+		.navbar
 			flex-direction: row
+			justify-content: center
+
+			.navbar_mobile_hamburger
+				display: none
+				
+			#navbar_container
+				display: flex
+				flex-direction: row

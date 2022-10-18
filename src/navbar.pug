@@ -29,7 +29,7 @@ mixin navbar_script
         function setup_navbar() {
             let navbar = document.getElementById("navbar");
 
-            let navbar_sticky = navbar.offsetTop - navbar.offsetHeight;
+            let navbar_sticky = navbar.offsetTop;
             
             function navbar_check_scroll() {
                 if (window.pageYOffset > navbar_sticky) {
@@ -48,7 +48,8 @@ mixin navbar_script
         }
 
 mixin navbar
-    .navbar#navbar
+    .navbar_context
+        .navbar#navbar
             .navbar_mobile_hamburger
                 a(href="javascript:toggle_nav_container()")
                     i(class="fa fa-bars")
