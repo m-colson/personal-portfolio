@@ -30,6 +30,11 @@ mixin navbar_script
             let navbar = document.getElementById("navbar");
 
             let navbar_sticky = navbar.offsetTop;
+
+            addEventListener('resize', () => {
+                navbar_sticky = navbar.offsetTop;
+                console.log("resize")
+            });
             
             function navbar_check_scroll() {
                 if (window.pageYOffset > navbar_sticky) {

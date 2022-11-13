@@ -8,12 +8,6 @@
 				"link":"projects/website.pug",
 				"img":"../assets/personal_website.webp",
 				"alt":"Image of landing page"
-			},
-			{
-				"name": "Axom Language",
-				"category": "Rust",
-				"desc":"A toy language to experiment with iterators and functional programming.",
-				"link":"axom/about.pug"
 			}
 		]
 	}

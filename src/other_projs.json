@@ -28,5 +28,11 @@
     "category": "Rust",
     "desc":"Reimplementation of TicTacPy in Rust.",
     "link":"#"
+},
+{
+    "name": "Axom Language",
+    "category": "Rust",
+    "desc":"A toy language to experiment with iterators and functional programming.",
+    "link":"axom/book/index.html"
 }
 ]
