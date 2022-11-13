@@ -33,7 +33,7 @@ mixin navbar_script
 
             addEventListener('resize', () => {
                 navbar_sticky = navbar.offsetTop;
-                console.log("resize")
+                navbar_check_scroll();
             });
             
             function navbar_check_scroll() {
@@ -44,7 +44,7 @@ mixin navbar_script
                 }
             }
 
-            window.onscroll = navbar_check_scroll;
+            addEventListener('scroll', navbar_check_scroll);
         }
 
         function navigate() {

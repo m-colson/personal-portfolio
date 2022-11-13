@@ -8,6 +8,12 @@
 				"link":"projects/website.pug",
 				"img":"../assets/personal_website.webp",
 				"alt":"Image of landing page"
+			},
+			{
+				"name": "Event Server",
+				"category": "Rust",
+				"desc":"Easy api for ical links and google calendar",
+				"link":"projects/eventserver.pug"
 			}
 		]
 	}
