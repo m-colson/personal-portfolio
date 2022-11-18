@@ -29,10 +29,8 @@ body
 		margin: 0px
 		padding: 0px
 
-#about
-	padding-top: 4rem
-
 .about
+	padding-top: 4rem
 	//min-height: 100vh
 	display: flex
 	flex-direction: column
@@ -73,16 +71,15 @@ body
 
 .portfolio
 	padding-top: 4rem
-	min-height: 100vh
 
 .portfolio_header
 	width: 100%
-	background-color: $secondary
-	color: $black
+	background-color: $primary
+	color: $white
 	text-align: center
 	font-size: 5rem
+	padding: 0px
 	padding-top: 1rem
-	padding-bottom: 1rem
 
 	p
 		margin: 0px
@@ -133,26 +130,32 @@ body
 	.category:hover
 		scale: 102%
 
+.projects_container
+	background-color: $primary
+	padding-bottom: 4rem
+
 .projects
 	margin: auto
 	max-width: 1200px
 	display: flex
 	flex-wrap: wrap
 	justify-content: center
-		// align-items: center
+
 	.Project
 		width: 30rem
 		flex-grow: 1
 		max-width: 50rem
 		margin: 1rem
 		border-style: solid
-		border-color: $primary
+		border-color: $secondary
+		border-width: 0.25rem
 		border-radius: 0.5rem
 		text-decoration: none
 		color: $white
 		display: flex
 		flex-direction: column
 		align-items: center
+		background-color: $black
 		.Project_img
 			width: min(28rem, 100% - 2rem)
 			aspect-ratio : 16 / 9
@@ -166,7 +169,6 @@ body
 			text-align: center
 			width: 100%
 			color: $white
-			background-color: $primary
 		.Project_desc
 			width: 28rem
 			font-size: 1.25rem
@@ -188,7 +190,9 @@ body
 			max-width: 100%
 			margin: 0rem
 			margin-top: 1rem
+			margin-bottom: 1rem
 			border-style: none
+			border-radius: 1rem
 			.Project_desc
 				width: min(28rem, 100% - 2rem)
 				margin: 1rem

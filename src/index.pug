@@ -98,9 +98,10 @@ html(lang="en")
             .portfolio_header
                 p My Projects
             
-            .projects
-                each proj in projects
-                    +project(proj)
+            .projects_container
+                .projects
+                    each proj in projects
+                        +project(proj)
         footer
             a(href="https://github.com/m-colson")
                 p Matthew Colson(github)
