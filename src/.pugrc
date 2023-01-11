@@ -14,6 +14,12 @@
 				"category": "Rust",
 				"desc":"Easy api for ical links and google calendar",
 				"link":"projects/eventserver.pug"
+			},
+			{
+				"name": "Atawata",
+				"category": "Hardware",
+				"desc": "An automatic moisture regulation system for composters",
+				"link": "projects/atawata.pug"
 			}
 		]
 	}

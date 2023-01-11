@@ -4,48 +4,48 @@ mixin navbar_script
         @import '/node_modules/@fortawesome/fontawesome-free/css/solid.min.css';
 
     script.
-        function toggle_nav_container() {
-            let x = document.getElementById("navbar_container");
+        //- function toggle_nav_container() {
+        //-     let x = document.getElementById("navbar_container");
 
-            if(x == null){
-                console.error("Navbar_container does not exist")
-                return
-            }
+        //-     if(x == null){
+        //-         console.error("navbar_container does not exist")
+        //-         return
+        //-     }
 
-            if (x.style.display === "flex") {
-                x.style.removeProperty('display');
-            } else {
-                x.style.display = "flex";
-            }
-        }
+        //-     if (x.style.display === "flex") {
+        //-         x.style.removeProperty('display');
+        //-     } else {
+        //-         x.style.display = "flex";
+        //-     }
+        //- }
 
-        function collapse_nav_bar() {
-            document
-                .getElementById("navbar_container")
-                .style
-                .removeProperty('display');
-        }
+        //- function collapse_nav_bar() {
+        //-     document
+        //-         .getElementById("navbar_container")
+        //-         .style
+        //-         .removeProperty('display');
+        //- }
 
-        function setup_navbar() {
-            let navbar = document.getElementById("navbar");
+        //- function setup_navbar() {
+        //-     let navbar = document.getElementById("navbar");
 
-            let navbar_sticky = navbar.offsetTop;
+        //-     let navbar_sticky = navbar.offsetTop;
 
-            addEventListener('resize', () => {
-                navbar_sticky = navbar.offsetTop;
-                navbar_check_scroll();
-            });
+        //-     addEventListener('resize', () => {
+        //-         navbar_sticky = navbar.offsetTop;
+        //-         navbar_check_scroll();
+        //-     });
             
-            function navbar_check_scroll() {
-                if (window.pageYOffset > navbar_sticky) {
-                    navbar.classList.add("sticky")
-                } else {
-                    navbar.classList.remove("sticky");
-                }
-            }
+        //-     function navbar_check_scroll() {
+        //-         if (window.pageYOffset > navbar_sticky) {
+        //-             navbar.classList.add("sticky")
+        //-         } else {
+        //-             navbar.classList.remove("sticky");
+        //-         }
+        //-     }
 
-            addEventListener('scroll', navbar_check_scroll);
-        }
+        //-     addEventListener('scroll', navbar_check_scroll);
+        //- }
 
         function navigate() {
             collapse_nav_bar(); 

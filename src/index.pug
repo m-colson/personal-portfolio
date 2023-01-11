@@ -27,7 +27,8 @@ html(lang="en")
         script.
             function setup() {
                 setup_observer()
-                setup_navbar()
+                //setup_navbar()
+                setup_header()
             }
 
             function setup_observer() {
@@ -47,6 +48,17 @@ html(lang="en")
                 
                 window.addEventListener("locationchange", obv);
             }
+
+            function setup_header() {
+                let index = 0;
+
+                setInterval(() => {
+                    document.getElementById("header_content").style.transition = (index == 0) ? "bottom 0s" : "bottom 1s";
+                    document.getElementById("header_content").style.bottom = `${94 * index}px`
+                    index++;
+                    index %= 5;
+                }, 2000);
+            }
         
         +navbar_script
 
@@ -54,8 +66,14 @@ html(lang="en")
         main(id="root")    
 
         .header
-            p Hello...
-            p I'm Matthew
+            p Hello I'm 
+            .header_inner
+                #header_content
+                    p Matthew
+                    p a programmer 
+                    p a designer
+                    p an engineer
+                    p Matthew
 
         +navbar    
 
